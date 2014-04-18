@@ -25,9 +25,11 @@
         <div class="hero-unit">
           <h1>Starter Bookmarklet</h1>
           <p>Drag the icon to your bookmarks toolbar</p>
-              <div class="bookmark-icon">
-                  <img src="images/Globe.png" height="50"/>
-                  <span>Bookmarklet!</span>
+            <div class="bookmark-icon">
+                <a href="javascript:function bootstrap() { console.log('in bootstrap code'); }; bootstrap(); void(0);">
+                <img src="images/Globe.png" alt="Bookmarklet!" height="50"/>
+                <span>Bookmarklet!</span>
+            </a>
             </div>
         </div>
 
@@ -49,7 +51,7 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <!--<script src="scripts/main.js"></script>-->
         <!-- endbuild -->
 </body>
 </html>
