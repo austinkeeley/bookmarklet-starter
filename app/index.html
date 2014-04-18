@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>bookmarklet starter</title>
+        <title>Bookmarklet Starter</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
@@ -17,16 +17,22 @@
         <!-- endbuild -->
     </head>
     <body>
+    <script type="text/javascript">
+        // Figure out our location of this page and build a URL for the js file
+        var url,
+            l = location;
+            url = l.protocol + '//' + l.host + '/scripts/main.js';
+    </script>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
 
         <div class="hero-unit">
-          <h1>Starter Bookmarklet</h1>
+          <h1>Bookmarklet Starter</h1>
           <p>Drag the icon to your bookmarks toolbar</p>
             <div class="bookmark-icon">
-                <a href="javascript:function bootstrap() { console.log('in bootstrap code'); }; bootstrap(); void(0);">
+                <a href="javascript:function bootstrap(){console.log('in bootstrap code');var d=document,s=d.createElement('scrip' + 't'),b=d.body,l=location;try{s.setAttribute('src', l.protocol + '//localhost:9000/scripts/main.js');b.appendChild(s);}catch(e){alert('Could not launch bookmarklet'); console.log(e)}};bootstrap();void(0);">
                 <img src="images/Globe.png" alt="Bookmarklet!" height="50"/>
                 <span>Bookmarklet!</span>
             </a>
